@@ -154,9 +154,14 @@ hasChildrenValues(characters, 'Sansa') will return false
 
 const hasChildrenValues = (arr, character) => {
   // Solution code here...
-  return Object.values(arr).map(key => {
-    key.name && key.children ? true : false;
-  });
+  return arr
+    .map((object) => {
+      if (object.children) {
+        return object.name;
+      }
+    })
+    .includes(character);
+
 };
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal

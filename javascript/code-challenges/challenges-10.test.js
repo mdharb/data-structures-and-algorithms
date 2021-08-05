@@ -144,7 +144,7 @@ const errands = [
 
 const howManyTreats = (arr) => {
   // Solution code here...
-  let treatsQty=errands[2].items[1].quantity;
+  let treatsQty=arr[2].items[1].quantity;
   return treatsQty;
 };
 

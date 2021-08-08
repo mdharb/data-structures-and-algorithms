@@ -10,13 +10,11 @@ E.g. [4,2,7,5,9,2] -> 9
 ------------------------------------------------------------------------------------------------ */
 const maxInArray = (arr) => {
   // Solution code here...
-  let maxNumber = arr.reduce(
+  let maxValue = arr.reduce(
     (answer, current) => {
       return (answer > current ? answer : current);
-    }
-  );
-  return maxNumber;
-
+    });
+    return maxValue;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -154,9 +152,14 @@ hasChildrenValues(characters, 'Sansa') will return false
 
 const hasChildrenValues = (arr, character) => {
   // Solution code here...
-  return Object.values(arr).map(key => {
-    key.name && key.children ? true : false;
-  });
+  return arr
+    .map((object) => {
+      if (object.children) {
+        return object.name;
+      }
+    })
+    .includes(character);
+
 };
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal

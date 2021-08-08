@@ -14,6 +14,7 @@ const maxInArray = (arr) => {
     (answer, current) => {
       return (answer > current ? answer : current);
     });
+    return maxValue;
 };
 
 /* ------------------------------------------------------------------------------------------------
